@@ -1,0 +1,141 @@
+<html lang="en">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="background:#262733 !important;">
+  <div class="container-fluid">
+    <a class="navbar-brand">Lessbot Panel</a>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item" style="border:black !important;">
+          <a class="nav-link" href="#settings" data-bs-toggle="modal" data-bs-target="#settingspanel">Settings</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<head>
+  <title>Less Control Panel</title>
+  <link rel="icon" href="favicon.jpg">
+  <script src="bundle.js"></script>
+</head>
+
+<style>
+
+  body {
+    background: #262733 !important;
+  }
+
+  table .btn {
+    border-radius: 0px !important;
+    height: 2px !imporant;
+    text-decoration:none;
+    font-size: 10px !important;
+  }
+
+  table {
+    margin-top:-1.5rem;
+    border-top:none !important;
+    align-items: left;
+    font-size: 10px;
+    border-collapse: separate;
+    border-spacing: -2px;
+  }
+
+  thead {
+    align-items: center;
+    font-size: 14px;
+    border-collapse: separate !important;
+    border-spacing: -20px !important;
+  }
+
+  .form-control-sm {
+    height: 40px !important;
+  }
+
+  .all-center {
+    align-items: center;
+  }
+
+  tr {
+    border: 0.1px solid #2f3030 !important;
+  }
+
+  td {
+    padding:2px !important;
+  }
+
+  .modal-dialog {
+    background:#262733 !important;
+    color:white !important;
+  } .modal-content {
+    background: #262733 !important;
+  }
+</style>
+
+<body>
+  <div>
+    <center>
+      <br>
+      <div id="table-container">
+        <table id="clients" style="font-size:12px;" class="table table-hover">
+          <thead>
+            <td style="width:11rem;">Actions</td>
+            <td>Restarts</td>
+            <td>State</td>
+            <td>Steam</td>
+            <td>Name</td>
+            <td>Queue</td>
+            <td>Total Score</td>
+            <td>Connected</td>
+            <td>Playing</td>
+            <td>Team</td>
+            <td>Class</td>
+            <td>Current map</td>
+            <td>Players</td>
+          </thead>
+        </table>
+      </div>
+  </div>
+</body>
+
+<!-- Settings Popup -->
+<link rel="stylesheet" href="bootstrap.css">
+<script src="boostrap.js"></script>
+<div id="terminal"></div>
+
+<div class="modal" id="settingspanel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="border-radius:none;">
+      <div class="modal-header" style="border-bottom:none;">
+        <h3 class="modal-title">Settings Ui Manager</h3>
+        <button type="button" class="btn-close" style="color:red !important;" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- this is where all of our settings go -->
+        <input type="button" class="btn btn-link btn-sm" style="text-decoration:none;" id="bot-restartall" value="Restart all">
+        <input type="button" class="btn btn-link btn-sm" style="text-decoration:none;" id="bot-terminateall" value="Terminate all">
+        <input type="button" class="btn btn-link btn-sm" style="text-decoration:none;" id="bot-refresh" value="Refresh list">
+        <br>
+        <hr>
+        <div class="input-group" style="margin: 5px 0;">
+          <input type="text" id="bot-quota" class="form-control-sm" placeholder="Number of bots" size="28">
+          <button class="btn btn-primary btn-sm" type="button" id="bot-quota-apply">Add</button>
+        </div>
+        <div class="input-group" style="margin: 5px 0;">
+          <input id="api-password" type="text" class="form-control-sm" placeholder="Login with password (Panel-Pass)" size="28">
+          <button class="btn btn-primary btn-sm" type="button" id="api-login-button">Login</button>
+        </div>
+        <div class="input-group" style="margin: 5px 0;">
+          <span><input id="console" id="api-password" type="text" class="form-control-sm" placeholder="Send a command to every bot" size="28"></span>
+          <button class="btn btn-primary btn-sm" type="button" id="console-send">Send</button>
+        </div>
+        <hr>
+        <center><small style="color:grey;"> &copy;Lesssyteam | Lesshook </small></center>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>

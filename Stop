@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# list any 8080 hosts
+list=`lsof -i:8080`
+echo "$list "
+
+echo -e '\n Please check if any processes listed are important \n if not then please press ENTER to end all process of [8080]'
+read -p ""
+
+# main kill function
+kill -9 $(lsof -t -i:8080) 
