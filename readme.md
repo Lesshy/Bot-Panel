@@ -6,3 +6,6 @@ is a better designed panel for botting (localhost used) and its super usefull wh
 has less information from the base of IPC menu cathook uses.
 <br>
 other than this it's a pretty simple menu
+
+## ALSO!
+use `account.txt` instead of `accounts.txt` and user_instances is replaced with user-accounts <br> where this is located is `Bot-Panel/account/` <i> DO NOT PUT ACCOUNT.TXT IN THE MAIN DIRECTORY!!!! </i>
